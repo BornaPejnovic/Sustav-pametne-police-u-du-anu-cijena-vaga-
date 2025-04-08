@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": -9, "left": -80.4, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -224.4,
+      "left": -82.6,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-led", "id": "led2", "top": -224.4, "left": 3.8, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -220.9,
+      "left": 185.9,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -220.9,
+      "left": 109.1,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -110.4,
+      "left": -19.75,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -110.4,
+      "left": -67.75,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -168.8,
+      "left": -170.58,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "btn2:1.r", "mega:2", "green", [ "v0" ] ],
+    [ "btn1:1.r", "mega:3", "green", [ "v0" ] ],
+    [ "btn2:2.r", "mega:GND.1", "green", [ "v0" ] ],
+    [ "btn1:2.r", "mega:GND.1", "green", [ "v0" ] ],
+    [ "led1:C", "r2:1", "green", [ "v0" ] ],
+    [ "r2:2", "mega:GND.1", "green", [ "h0" ] ],
+    [ "r1:2", "mega:GND.1", "green", [ "h0" ] ],
+    [ "r1:1", "led2:C", "green", [ "h0" ] ],
+    [ "led1:A", "mega:5", "green", [ "v0" ] ],
+    [ "led2:A", "mega:6", "green", [ "v0" ] ],
+    [ "pir1:VCC", "mega:5V", "red", [ "v0" ] ],
+    [ "pir1:GND", "mega:GND.3", "black", [ "v0" ] ],
+    [ "pir1:OUT", "mega:18", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
