@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "author": "Kristijan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": -156.6, "left": -122, "attrs": {} },
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 173.4, "left": 15.6, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -86.5,
+      "left": 185.9,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1", "bounce": "0" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -86.5,
+      "left": 253.1,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1", "bounce": "0" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -80.4,
+      "left": -111.4,
+      "attrs": { "color": "blue" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -174.1, "left": -77, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -197.6, "left": 11.82, "attrs": {} }
+  ],
+  "connections": [
+    [ "mega:GND.1", "bb1:bn.15", "black", [ "v0" ] ],
+    [ "mega:13", "bb1:2b.j", "blue", [ "v0" ] ],
+    [ "bb1:42b.j", "bb1:bn.34", "black", [ "v0" ] ],
+    [ "bb1:35b.j", "bb1:bn.28", "black", [ "v0" ] ],
+    [ "bb1:40b.j", "mega:2", "green", [ "v0" ] ],
+    [ "bb1:33b.j", "mega:3", "green", [ "v0" ] ],
+    [ "mega:5V.1", "bb1:bp.41", "red", [ "v0" ] ],
+    [ "bb1:6t.e", "bb1:bn.4", "black", [ "v0" ] ],
+    [ "bb1:8t.e", "bb1:bp.5", "red", [ "v0" ] ],
+    [ "bb1:7t.e", "mega:A0", "orange", [ "v0" ] ],
+    [ "bb1:1b.j", "bb1:bn.1", "black", [ "v0" ] ],
+    [ "bb1:16t.e", "bb1:bp.12", "red", [ "v0" ] ],
+    [ "bb1:18t.e", "bb1:bn.14", "black", [ "v0" ] ],
+    [ "btn1:1.l", "bb1:35t.b", "", [ "$bb" ] ],
+    [ "btn1:2.l", "bb1:33t.b", "", [ "$bb" ] ],
+    [ "btn1:1.r", "bb1:35b.g", "", [ "$bb" ] ],
+    [ "btn1:2.r", "bb1:33b.g", "", [ "$bb" ] ],
+    [ "btn2:1.l", "bb1:42t.b", "", [ "$bb" ] ],
+    [ "btn2:2.l", "bb1:40t.b", "", [ "$bb" ] ],
+    [ "btn2:1.r", "bb1:42b.g", "", [ "$bb" ] ],
+    [ "btn2:2.r", "bb1:40b.g", "", [ "$bb" ] ],
+    [ "led1:A", "bb1:2b.f", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:1b.f", "", [ "$bb" ] ],
+    [ "pot1:GND", "bb1:6t.a", "", [ "$bb" ] ],
+    [ "pot1:SIG", "bb1:7t.a", "", [ "$bb" ] ],
+    [ "pot1:VCC", "bb1:8t.a", "", [ "$bb" ] ],
+    [ "bb1:17t.e", "mega:18", "orange", [ "v0" ] ],
+    [ "pir1:VCC", "bb1:16t.a", "", [ "$bb" ] ],
+    [ "pir1:OUT", "bb1:17t.a", "", [ "$bb" ] ],
+    [ "pir1:GND", "bb1:18t.a", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
