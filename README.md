@@ -27,20 +27,6 @@ Motivacija za ovaj projekt bila je poboljšanje učinkovitosti maloprodajnih sus
 - **RFID modul** (opcijski) – za identifikaciju proizvoda  
 - **C/C++ (Arduino IDE)** – programski jezik za upravljanje komponentama  
 
-
----
-
-## Instalacija
-
-1. Spojite komponente prema shemi:  
-   - Load cell → HX711 → Arduino  
-   - ESP8266 povezan s Arduino TX/RX  
-   - LED diode na digitalne pinove  
-2. Učitajte kod na Arduino pomoću Arduino IDE-a  
-3. Podesite Wi-Fi pristupne podatke u kodu  
-4. Pokrenite backend aplikaciju (ako je korištena) ili povežite s odgovarajućom bazom  
-5. Pratite podatke u stvarnom vremenu preko web sučelja ili serijskog monitora
-
 ---
 
 ## Članovi tima  
