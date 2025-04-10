@@ -47,12 +47,10 @@ Motivacija za ovaj projekt bila je poboljšanje učinkovitosti maloprodajnih sus
 
 ## Članovi tima  
 
-| Ime i prezime       | GitHub profil                                      | Glavni doprinos                         |
-|---------------------|----------------------------------------------------|-----------------------------------------|
-| Ana Horvat          | [@anahorvat](https://github.com/anahorvat)        | Programiranje Arduina i rad sa senzorima |
-| Ivan Kovačić        | [@ivankovac](https://github.com/ivankovac)        | Web sučelje i obrada podataka            |
-| Marko Novak         | [@markonovak](https://github.com/markonovak)      | Dokumentacija i integracija modula       |
-| Petra Babić         | [@petrababic](https://github.com/petrababic)      | Dizajn i testiranje korisničkog iskustva |
+| Ime i prezime         | GitHub profil                                     |
+|-----------------------|---------------------------------------------------|
+| Kristijan Jagunec     | [@anahorvat](https://github.com/anahorvat)        |
+| Borna Pejnović        | [@ivankovac](https://github.com/ivankovac)        |
 
 ---
 
