@@ -14,7 +14,6 @@ Motivacija za ovaj projekt bila je poboljšanje učinkovitosti maloprodajnih sus
 - Kada količina proizvoda padne ispod definiranog minimuma, mora se aktivirati LED indikator ili zvučni signal.
 - Sustav mora u stvarnom vremenu slati podatke putem Wi-Fi modula (ESP8266) na centralno računalo ili mobilni uređaj.
 - (Opcionalno) RFID čitač može identificirati točne proizvode na polici.
-- Podaci moraju biti prikazani u preglednom korisničkom sučelju (web ili mobilna aplikacija).
 - Sustav mora biti pouzdan i jednostavan za korištenje i nadogradnju.
 
 ---
