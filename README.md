@@ -49,8 +49,8 @@ Motivacija za ovaj projekt bila je poboljšanje učinkovitosti maloprodajnih sus
 
 | Ime i prezime         | GitHub profil                                     |
 |-----------------------|---------------------------------------------------|
-| Kristijan Jagunec     | [@anahorvat](https://github.com/anahorvat)        |
-| Borna Pejnović        | [@ivankovac](https://github.com/ivankovac)        |
+| Kristijan Jagunec     | [@kjagunec](https://github.com/kjagunec)          |
+| Borna Pejnović        | [@BornaPejnovic](https://github.com/BornaPejnovic)|
 
 ---
 
