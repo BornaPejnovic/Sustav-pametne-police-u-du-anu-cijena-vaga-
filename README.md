@@ -27,8 +27,7 @@ Motivacija za ovaj projekt bila je poboljšanje učinkovitosti maloprodajnih sus
 - **LED indikator** – vizualno upozorenje o niskim zalihama  
 - **RFID modul** (opcijski) – za identifikaciju proizvoda  
 - **C/C++ (Arduino IDE)** – programski jezik za upravljanje komponentama  
-- **HTML/CSS/JavaScript** – za izradu korisničkog sučelja (ako je korišten web pristup)  
-- **Firebase / HTTP server / MQTT** – (ovisno o implementaciji) za backend komunikaciju  
+
 
 ---
 
