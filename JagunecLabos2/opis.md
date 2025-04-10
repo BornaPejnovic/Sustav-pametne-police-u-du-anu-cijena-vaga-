@@ -35,10 +35,9 @@ Sustav je realiziran na **Arduino platformi** i testiran u stvarnim uvjetima kak
 | **FR-4** | Timer prekid mora automatski probuditi mikrokontroler svakih 10 sekundi. |
 | **FR-5** | Mikrokontroler mora koristiti **Power-down** mod za maksimalno smanjenje potrošnje energije. |
 | **FR-6** | Mikrokontroler mora reagirati na prekid tipke i izlaziti iz sleep moda kako bi trepćao LED diodom. |
-| **FR-7** | Potrošnja energije mora biti testirana u različitim sleep modovima i uspoređena s aktivnim režimom. |
-| **FR-8** | Prekid tajmera mora imati prednost u odnosu na vanjski prekid tipke. |
-| **FR-9** | Potrošnja energije mora biti minimizirana u svim fazama rada sustava (aktivnom i sleep modu). |
-| **FR-10** | Svaka funkcionalnost u sustavu mora biti testirana za ispravno reagiranje na prekide i sleep modove. |
+| **FR-7** | Prekid tajmera mora imati prednost u odnosu na vanjski prekid tipke. |
+| **FR-8** | Potrošnja energije mora biti minimizirana u svim fazama rada sustava (aktivnom i sleep modu). |
+| **FR-9** | Svaka funkcionalnost u sustavu mora biti testirana za ispravno reagiranje na prekide i sleep modove. |
 
 ## 4. Zaključak
 Ovaj sustav optimizira potrošnju energije mikrokontrolera pomoću sleep modova i prekida. Mikrokontroler se prebaci u **Power-down** mod kada nije aktivan, čime se smanjuje potrošnja energije, dok prekidi omogućuju probuditi sustav kada je potrebno izvršiti zadatak (npr. treptanje LED diode). Korištenje **LowPower** i **TimerOne** biblioteka omogućuje učinkovito upravljanje energijom u sustavu.
