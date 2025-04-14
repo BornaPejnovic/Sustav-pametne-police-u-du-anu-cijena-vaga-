@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['lastmillis_0',['lastMillis',['../d2/d8f/JagunecLabos1_2sketch_8ino.html#a7283b34c71004726281845d4cabe8c7c',1,'sketch.ino']]],
-  ['led1_1',['LED1',['../d6/d9a/Pejnovi_xC4_x87Labos1_2sketch_8ino.html#a8aa85ae9867fabf70ec72cd3bf6fb6b9',1,'sketch.ino']]],
-  ['led2_2',['LED2',['../d6/d9a/Pejnovi_xC4_x87Labos1_2sketch_8ino.html#ad09fe5bf321b9a2de26bd5e5b9af6424',1,'sketch.ino']]],
-  ['led_5fpin_3',['LED_PIN',['../d0/dcd/Pejnovi_xC4_x87Labos2_2sketch_8ino.html#ab4553be4db9860d940f81d7447173b2f',1,'sketch.ino']]],
-  ['ledpin_4',['ledPin',['../d2/d8f/JagunecLabos1_2sketch_8ino.html#a2cd9f0d96c9cd0637798de3baa7aee60',1,'sketch.ino']]],
-  ['loop_5',['loop',['../d2/d8f/JagunecLabos1_2sketch_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;sketch.ino'],['../de/df7/JagunecLabos2_2sketch_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;sketch.ino'],['../d6/d9a/Pejnovi_xC4_x87Labos1_2sketch_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;sketch.ino'],['../d0/dcd/Pejnovi_xC4_x87Labos2_2sketch_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;sketch.ino']]]
+  ['entersleepmode_0',['enterSleepMode',['../de/df7/JagunecLabos2_2sketch_8ino.html#aa9118fcc53fc3a9ba93842858201533a',1,'sketch.ino']]],
+  ['espserial_1',['espSerial',['../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#ad1c30d5ee545853be8353318a2a97964',1,'Sustav-pametne-police-u-du-anu-cijena-vaga-.ino']]]
 ];

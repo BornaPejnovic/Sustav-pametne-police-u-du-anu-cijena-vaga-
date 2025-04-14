@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['pir_5fsensor_0',['PIR_SENSOR',['../d6/d9a/Pejnovi_xC4_x87Labos1_2sketch_8ino.html#a379c6aca42757cab67a55b21ecb59f21',1,'sketch.ino']]],
-  ['pirisr_1',['pirISR',['../d6/d9a/Pejnovi_xC4_x87Labos1_2sketch_8ino.html#a2cd484cd50c19e3b1abc03e61d844389',1,'sketch.ino']]],
-  ['potentiometerpin_2',['potentiometerPin',['../d2/d8f/JagunecLabos1_2sketch_8ino.html#a610f6f648c8b1bb9d9841c95d70b0eed',1,'sketch.ino']]]
+  ['lastmillis_0',['lastMillis',['../d2/d8f/JagunecLabos1_2sketch_8ino.html#a7283b34c71004726281845d4cabe8c7c',1,'sketch.ino']]],
+  ['led1_1',['LED1',['../d6/d9a/Pejnovi_xC4_x87Labos1_2sketch_8ino.html#a8aa85ae9867fabf70ec72cd3bf6fb6b9',1,'sketch.ino']]],
+  ['led2_2',['LED2',['../d6/d9a/Pejnovi_xC4_x87Labos1_2sketch_8ino.html#ad09fe5bf321b9a2de26bd5e5b9af6424',1,'sketch.ino']]],
+  ['led_5fpin_3',['LED_PIN',['../d0/dcd/Pejnovi_xC4_x87Labos2_2sketch_8ino.html#ab4553be4db9860d940f81d7447173b2f',1,'sketch.ino']]],
+  ['ledpin_4',['ledPin',['../d2/d8f/JagunecLabos1_2sketch_8ino.html#a2cd9f0d96c9cd0637798de3baa7aee60',1,'sketch.ino']]],
+  ['loop_5',['loop',['../d2/d8f/JagunecLabos1_2sketch_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;sketch.ino'],['../de/df7/JagunecLabos2_2sketch_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;sketch.ino'],['../d6/d9a/Pejnovi_xC4_x87Labos1_2sketch_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;sketch.ino'],['../d0/dcd/Pejnovi_xC4_x87Labos2_2sketch_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;sketch.ino'],['../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;Sustav-pametne-police-u-du-anu-cijena-vaga-.ino']]]
 ];

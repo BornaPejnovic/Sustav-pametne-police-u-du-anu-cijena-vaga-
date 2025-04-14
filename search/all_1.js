@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['entersleepmode_0',['enterSleepMode',['../de/df7/JagunecLabos2_2sketch_8ino.html#aa9118fcc53fc3a9ba93842858201533a',1,'sketch.ino']]]
+  ['clk_0',['CLK',['../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a4b355291fe6b8ba8e167ab0faa862e45',1,'Sustav-pametne-police-u-du-anu-cijena-vaga-.ino']]]
 ];
