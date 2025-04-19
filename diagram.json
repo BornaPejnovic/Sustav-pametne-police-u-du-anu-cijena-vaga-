@@ -10,8 +10,9 @@
       "id": "cell1",
       "top": -151,
       "left": 175.4,
-      "attrs": { "type": "50kg" }
-    }
+      "attrs": { "type": "5kg" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 6, "left": 80.6, "attrs": { "color": "red" } }
   ],
   "connections": [
     [ "atmodem:GND", "mega:GND.1", "black", [ "v0" ] ],
@@ -22,7 +23,9 @@
     [ "cell1:VCC", "mega:5V.2", "red", [ "h0" ] ],
     [ "cell1:GND", "mega:GND.1", "black", [ "h0" ] ],
     [ "cell1:DT", "mega:3", "green", [ "h0" ] ],
-    [ "cell1:SCK", "mega:2", "green", [ "h0" ] ]
+    [ "cell1:SCK", "mega:2", "green", [ "h0" ] ],
+    [ "led1:C", "mega:GND.1", "black", [ "h-57.2", "v96" ] ],
+    [ "led1:A", "mega:7", "green", [ "v0" ] ]
   ],
   "dependencies": {}
 }
