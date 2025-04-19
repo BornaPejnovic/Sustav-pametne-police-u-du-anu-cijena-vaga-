@@ -51,25 +51,20 @@
   * Reads weight from HX711 and sends it to the ESP-01 module if the change exceeds the threshold.
   */
  void loop() {
-   if (scale.is_ready()) {
-     float weight = scale.get_units(10);
- 
-     if (abs(weight - previousWeight) > threshold) {
-       previousWeight = weight;
- 
-       Serial.print("New weight: ");
-       Serial.println(weight);
- 
-       // Format and send message to ESP
-       String message = "Weight: " + String(weight, 2) + " g";
-       sendToESP(message);
-     }
-   } else {
-     Serial.println("Scale not ready");
-   }
- 
-   delay(1000);
- }
+  scale.wait_ready();
+  float weight = scale.get_units();
+
+  if (abs(weight - previousWeight) > threshold) {
+    previousWeight = weight;
+
+    Serial.print("New weight: ");
+    Serial.println(weight);
+
+    // Format and send message to ESP
+    String message = "Weight: " + String(weight, 2) + " g";
+    sendToESP(message);
+  }
+}
  
  /**
   * @brief Sends a message to the ESP-01 module via SoftwareSerial.
