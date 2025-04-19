@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('d8/dbc/Sustav-pametne-police-u-du-anu-
 <div class="contents">
 <div class="textblock"><code>#include &quot;HX711.h&quot;</code><br />
 <code>#include &lt;SoftwareSerial.h&gt;</code><br />
+<code>#include &lt;TimerOne.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -108,6 +109,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a4b355291fe6b8ba8e167ab0faa862e45" id="r_a4b355291fe6b8ba8e167ab0faa862e45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a4b355291fe6b8ba8e167ab0faa862e45">CLK</a>&#160;&#160;&#160;2</td></tr>
 <tr class="memdesc:a4b355291fe6b8ba8e167ab0faa862e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clock pin for HX711.  <br /></td></tr>
 <tr class="separator:a4b355291fe6b8ba8e167ab0faa862e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb7a7ba1ab7e0406f1b5ab36d579f585" id="r_aeb7a7ba1ab7e0406f1b5ab36d579f585"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#aeb7a7ba1ab7e0406f1b5ab36d579f585">LED</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:aeb7a7ba1ab7e0406f1b5ab36d579f585"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED pin.  <br /></td></tr>
+<tr class="separator:aeb7a7ba1ab7e0406f1b5ab36d579f585"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -123,6 +127,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aacf4d6eddcdf38ad317b517e3e9b6af6" id="r_aacf4d6eddcdf38ad317b517e3e9b6af6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#aacf4d6eddcdf38ad317b517e3e9b6af6">sendToESP</a> (String msg)</td></tr>
 <tr class="memdesc:aacf4d6eddcdf38ad317b517e3e9b6af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a message to the ESP-01 module via SoftwareSerial.  <br /></td></tr>
 <tr class="separator:aacf4d6eddcdf38ad317b517e3e9b6af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5664bd38fc668253a0152e6b319aafbb" id="r_a5664bd38fc668253a0152e6b319aafbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a5664bd38fc668253a0152e6b319aafbb">blink</a> ()</td></tr>
+<tr class="memdesc:a5664bd38fc668253a0152e6b319aafbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blinks the LED.  <br /></td></tr>
+<tr class="separator:a5664bd38fc668253a0152e6b319aafbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -135,6 +142,12 @@ Variables</h2></td></tr>
 <tr class="memitem:a5087b74b6e91a539c0b8fbb449b2cc9b" id="r_a5087b74b6e91a539c0b8fbb449b2cc9b"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a5087b74b6e91a539c0b8fbb449b2cc9b">threshold</a> = 5.0</td></tr>
 <tr class="memdesc:a5087b74b6e91a539c0b8fbb449b2cc9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum change in weight required to trigger a new transmission (in grams)  <br /></td></tr>
 <tr class="separator:a5087b74b6e91a539c0b8fbb449b2cc9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63548bb4f424b0d06779804dcd1e77b" id="r_aa63548bb4f424b0d06779804dcd1e77b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#aa63548bb4f424b0d06779804dcd1e77b">blinkFlag</a> = false</td></tr>
+<tr class="memdesc:aa63548bb4f424b0d06779804dcd1e77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for the blink interrupt.  <br /></td></tr>
+<tr class="separator:aa63548bb4f424b0d06779804dcd1e77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaab577b9c61d226d9f20aef2fe4e7ff" id="r_acaab577b9c61d226d9f20aef2fe4e7ff"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#acaab577b9c61d226d9f20aef2fe4e7ff">minimalMass</a> = 1000.0</td></tr>
+<tr class="memdesc:acaab577b9c61d226d9f20aef2fe4e7ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum mass that needs to be on the scale.  <br /></td></tr>
+<tr class="separator:acaab577b9c61d226d9f20aef2fe4e7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a4b355291fe6b8ba8e167ab0faa862e45" name="a4b355291fe6b8ba8e167ab0faa862e45"></a>
@@ -169,7 +182,43 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aeb7a7ba1ab7e0406f1b5ab36d579f585" name="aeb7a7ba1ab7e0406f1b5ab36d579f585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb7a7ba1ab7e0406f1b5ab36d579f585">&#9670;&#160;</a></span>LED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LED pin. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a5664bd38fc668253a0152e6b319aafbb" name="a5664bd38fc668253a0152e6b319aafbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5664bd38fc668253a0152e6b319aafbb">&#9670;&#160;</a></span>blink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void blink </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Blinks the LED. </p>
+<p>Turns the LED off if it was on and vice versa. </p>
+
+</div>
+</div>
 <a id="ad1c30d5ee545853be8353318a2a97964" name="ad1c30d5ee545853be8353318a2a97964"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad1c30d5ee545853be8353318a2a97964">&#9670;&#160;</a></span>espSerial()</h2>
 
@@ -268,6 +317,38 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="aa63548bb4f424b0d06779804dcd1e77b" name="aa63548bb4f424b0d06779804dcd1e77b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa63548bb4f424b0d06779804dcd1e77b">&#9670;&#160;</a></span>blinkFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool blinkFlag = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag for the blink interrupt. </p>
+
+</div>
+</div>
+<a id="acaab577b9c61d226d9f20aef2fe4e7ff" name="acaab577b9c61d226d9f20aef2fe4e7ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaab577b9c61d226d9f20aef2fe4e7ff">&#9670;&#160;</a></span>minimalMass</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float minimalMass = 1000.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimum mass that needs to be on the scale. </p>
+
+</div>
+</div>
 <a id="a660f922defe68dabab3e041f377f2853" name="a660f922defe68dabab3e041f377f2853"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a660f922defe68dabab3e041f377f2853">&#9670;&#160;</a></span>previousWeight</h2>
 
