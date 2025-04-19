@@ -37,7 +37,7 @@
    espSerial.begin(9600);
  
    scale.begin(DOUT, CLK);
-   scale.set_scale();
+   scale.set_scale(0.42);
    scale.tare();  ///< Set the current load cell value as zero
  
    Serial.println("Scale ready");
