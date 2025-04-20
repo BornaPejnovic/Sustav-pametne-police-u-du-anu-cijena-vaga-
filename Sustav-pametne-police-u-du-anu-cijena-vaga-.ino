@@ -6,10 +6,11 @@
  * them to an ESP-01 module using AT commands through a software serial connection.
 */
 
-#include "HX711.h"
+#include <HX711.h>
 #include <SoftwareSerial.h>
 #include <TimerOne.h>
- 
+#include <LiquidCrystal_I2C.h>
+
 /// Data pin for HX711
 #define DOUT  3
  
@@ -24,6 +25,9 @@ HX711 scale;
  
 /// Software serial communication with ESP-01 (RX = 18, TX = 19)
 SoftwareSerial espSerial(18, 19);
+
+// LCD object with I2C communication for displaying the current weight
+LiquidCrystal_I2C lcd(0x27, 16, 2);
  
 /// Last measured weight
 float previousWeight = 0.0;
@@ -54,6 +58,11 @@ void setup() {
   scale.set_scale(0.42);
   scale.tare();  ///< Set the current load cell value as zero
  
+  lcd.init();            // Initialize LCD
+  lcd.backlight();       // Turn on backlight
+  lcd.setCursor(0, 0);
+  lcd.print("Scale Ready");
+
   Serial.println("Scale ready");
   espSerial.println("AT");
   delay(1000);
@@ -72,6 +81,13 @@ void loop() {
     previousWeight = weight;
     String message = "New weight: " + String(weight) + " g";
     Serial.println(message);
+
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Weight:");
+    lcd.setCursor(0, 1);
+    lcd.print(weight, 1);  // One decimal precision
+    lcd.print(" g");
 
     // Send message to ESP and blink LED if mass falls below the minimum
     if (weight < minimalMass && blinkFlag == false) {
