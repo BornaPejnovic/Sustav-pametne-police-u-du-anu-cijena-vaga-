@@ -47,7 +47,6 @@ const float minimalMass = 1000.0;
   * Initializes serial communication, HX711 scale, and ESP-01 communication.
 */
 void setup() {
-  Serial.begin(9600);
   espSerial.begin(9600);
 
   pinMode(LED, OUTPUT);
@@ -63,7 +62,6 @@ void setup() {
   lcd.setCursor(0, 0);
   lcd.print("Scale Ready");
 
-  Serial.println("Scale ready");
   espSerial.println("AT");
   delay(1000);
 }
@@ -79,8 +77,6 @@ void loop() {
 
   if (abs(weight - previousWeight) > threshold) {
     previousWeight = weight;
-    String message = "New weight: " + String(weight) + " g";
-    Serial.println(message);
 
     lcd.clear();
     lcd.setCursor(0, 0);
@@ -100,7 +96,9 @@ void loop() {
       sendToESP("Products restocked!");
       blinkFlag = false;
       Timer1.detachInterrupt();
-      digitalWrite(LED, LOW);
+      if (digitalRead(LED) == HIGH) {
+        digitalWrite(LED, LOW);
+      }
     }
     
   }
