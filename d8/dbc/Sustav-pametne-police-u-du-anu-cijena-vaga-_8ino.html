@@ -97,9 +97,10 @@ $(document).ready(function(){initNavTree('d8/dbc/Sustav-pametne-police-u-du-anu-
   <div class="headertitle"><div class="title">Sustav-pametne-police-u-du-anu-cijena-vaga-.ino File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;HX711.h&quot;</code><br />
+<div class="textblock"><code>#include &lt;HX711.h&gt;</code><br />
 <code>#include &lt;SoftwareSerial.h&gt;</code><br />
 <code>#include &lt;TimerOne.h&gt;</code><br />
+<code>#include &lt;LiquidCrystal_I2C.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -118,6 +119,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ad1c30d5ee545853be8353318a2a97964" id="r_ad1c30d5ee545853be8353318a2a97964"><td class="memItemLeft" align="right" valign="top">SoftwareSerial&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#ad1c30d5ee545853be8353318a2a97964">espSerial</a> (18, 19)</td></tr>
 <tr class="memdesc:ad1c30d5ee545853be8353318a2a97964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Software serial communication with ESP-01 (RX = 18, TX = 19)  <br /></td></tr>
 <tr class="separator:ad1c30d5ee545853be8353318a2a97964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae084e1bc8ccb35ea289ba0ca4972ea6d" id="r_ae084e1bc8ccb35ea289ba0ca4972ea6d"><td class="memItemLeft" align="right" valign="top">LiquidCrystal_I2C&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#ae084e1bc8ccb35ea289ba0ca4972ea6d">lcd</a> (0x27, 16, 2)</td></tr>
+<tr class="separator:ae084e1bc8ccb35ea289ba0ca4972ea6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d" id="r_a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
 <tr class="memdesc:a4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arduino setup function.  <br /></td></tr>
 <tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,6 +133,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a5664bd38fc668253a0152e6b319aafbb" id="r_a5664bd38fc668253a0152e6b319aafbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a5664bd38fc668253a0152e6b319aafbb">blink</a> ()</td></tr>
 <tr class="memdesc:a5664bd38fc668253a0152e6b319aafbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blinks the LED.  <br /></td></tr>
 <tr class="separator:a5664bd38fc668253a0152e6b319aafbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38d0369223c952e21c91df75dbbe28de" id="r_a38d0369223c952e21c91df75dbbe28de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a38d0369223c952e21c91df75dbbe28de">displayWeight</a> (float weight)</td></tr>
+<tr class="memdesc:a38d0369223c952e21c91df75dbbe28de"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD communication for displaying weight.  <br /></td></tr>
+<tr class="separator:a38d0369223c952e21c91df75dbbe28de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7192c09630d0df44b53e9f8242aca0e3" id="r_a7192c09630d0df44b53e9f8242aca0e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a7192c09630d0df44b53e9f8242aca0e3">displayMessage</a> (String message)</td></tr>
+<tr class="memdesc:a7192c09630d0df44b53e9f8242aca0e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD communication for displaying messages.  <br /></td></tr>
+<tr class="separator:a7192c09630d0df44b53e9f8242aca0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -219,6 +228,60 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a7192c09630d0df44b53e9f8242aca0e3" name="a7192c09630d0df44b53e9f8242aca0e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7192c09630d0df44b53e9f8242aca0e3">&#9670;&#160;</a></span>displayMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void displayMessage </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD communication for displaying messages. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Message</td><td>string to be displayed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Displays the sent message. Checks if the message is too long and moves the next word to the second row. If the message is too long, displays error message. </p>
+
+</div>
+</div>
+<a id="a38d0369223c952e21c91df75dbbe28de" name="a38d0369223c952e21c91df75dbbe28de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38d0369223c952e21c91df75dbbe28de">&#9670;&#160;</a></span>displayWeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void displayWeight </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>weight</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD communication for displaying weight. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weight</td><td>Weight number to be displayed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Displays the new weight value when change is detected. </p>
+
+</div>
+</div>
 <a id="ad1c30d5ee545853be8353318a2a97964" name="ad1c30d5ee545853be8353318a2a97964"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad1c30d5ee545853be8353318a2a97964">&#9670;&#160;</a></span>espSerial()</h2>
 
@@ -246,6 +309,40 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Software serial communication with ESP-01 (RX = 18, TX = 19) </p>
+
+</div>
+</div>
+<a id="ae084e1bc8ccb35ea289ba0ca4972ea6d" name="ae084e1bc8ccb35ea289ba0ca4972ea6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae084e1bc8ccb35ea289ba0ca4972ea6d">&#9670;&#160;</a></span>lcd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LiquidCrystal_I2C lcd </td>
+          <td>(</td>
+          <td class="paramtype">0x27&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">16&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">2&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -311,8 +408,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Arduino setup function. </p>
-<p>Initializes serial communication, HX711 scale, and ESP-01 communication. </p>
-<p>&lt; Set the current load cell value as zero</p>
+<p>Initializes ESP-01 communication, pin modes, HX711 scale and I2C LCD. </p>
 
 </div>
 </div>
