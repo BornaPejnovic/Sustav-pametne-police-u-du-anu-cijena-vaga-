@@ -78,12 +78,7 @@ void loop() {
   if (abs(weight - previousWeight) > threshold) {
     previousWeight = weight;
 
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("Weight:");
-    lcd.setCursor(0, 1);
-    lcd.print(weight, 1);  // One decimal precision
-    lcd.print(" g");
+    changeDisplay(weight);
 
     // Send message to ESP and blink LED if mass falls below the minimum
     if (weight < minimalMass && blinkFlag == false) {
@@ -120,4 +115,20 @@ void sendToESP(String msg) {
 */
 void blink() {
   digitalWrite(LED, !digitalRead(LED));
+}
+
+/**
+  * @brief LCD communication
+  * 
+  * @param weight Weight number to be displayed.
+  * 
+  * Displays the new weight value when change is detected.
+*/
+void changeDisplay(float weight) {
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Weight:");
+  lcd.setCursor(0, 1);
+  lcd.print(weight, 1);  // One decimal precision
+  lcd.print(" g");
 }
