@@ -10,6 +10,7 @@
 #include <SoftwareSerial.h>
 #include <TimerOne.h>
 #include <LiquidCrystal_I2C.h>
+#include <LowPower.h>
 
 /// Data pin for HX711
 #define DOUT  3
@@ -40,6 +41,9 @@ bool blinkFlag = false;
 
 /// Minimum mass that needs to be on the scale
 const float minimalMass = 1000.0;
+
+/// Flag for waking up the controller
+volatile bool hx711Ready = false;
  
 /**
   * @brief Arduino setup function.
@@ -52,6 +56,8 @@ void setup() {
   pinMode(LED, OUTPUT);
 
   Timer1.initialize(500000);  // half second interval
+
+  attachInterrupt(digitalPinToInterrupt(DOUT), hx711ISR, FALLING);  // interrupt for wake-up
  
   scale.begin(DOUT, CLK);
   scale.set_scale(0.42);
@@ -72,6 +78,15 @@ void setup() {
   * Reads weight from HX711 and sends it to the ESP-01 module if the change exceeds the threshold.
 */
 void loop() {
+  if (!hx711Ready) {
+    // Sleep until HX711 sets DOUT low (data ready)
+    LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_OFF);
+  }
+
+  // Clear the flag
+  hx711Ready = false;
+
+  // Proceed with reading the scale
   scale.wait_ready();
   float weight = scale.get_units();
 
@@ -119,6 +134,13 @@ void loop() {
 */
 void sendToESP(String msg) {
   espSerial.println(msg);
+}
+
+/**
+  * @brief Interrupt function that sets the wake-up flag to true.
+*/
+void hx711ISR() {
+  hx711Ready = true;
 }
 
 /**
