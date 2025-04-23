@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['lastmillis_0',['lastMillis',['../d2/d8f/JagunecLabos1_2sketch_8ino.html#a7283b34c71004726281845d4cabe8c7c',1,'sketch.ino']]],
-  ['ledpin_1',['ledPin',['../d2/d8f/JagunecLabos1_2sketch_8ino.html#a2cd9f0d96c9cd0637798de3baa7aee60',1,'sketch.ino']]]
+  ['hx711ready_0',['hx711Ready',['../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a3fe5889e757976cc7882609b870ff11f',1,'Sustav-pametne-police-u-du-anu-cijena-vaga-.ino']]]
 ];

@@ -101,6 +101,7 @@ $(document).ready(function(){initNavTree('d8/dbc/Sustav-pametne-police-u-du-anu-
 <code>#include &lt;SoftwareSerial.h&gt;</code><br />
 <code>#include &lt;TimerOne.h&gt;</code><br />
 <code>#include &lt;LiquidCrystal_I2C.h&gt;</code><br />
+<code>#include &lt;LowPower.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -130,6 +131,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aacf4d6eddcdf38ad317b517e3e9b6af6" id="r_aacf4d6eddcdf38ad317b517e3e9b6af6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#aacf4d6eddcdf38ad317b517e3e9b6af6">sendToESP</a> (String msg)</td></tr>
 <tr class="memdesc:aacf4d6eddcdf38ad317b517e3e9b6af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a message to the ESP-01 module via SoftwareSerial.  <br /></td></tr>
 <tr class="separator:aacf4d6eddcdf38ad317b517e3e9b6af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff957872c857e59a92c99991381cf34e" id="r_aff957872c857e59a92c99991381cf34e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#aff957872c857e59a92c99991381cf34e">hx711ISR</a> ()</td></tr>
+<tr class="memdesc:aff957872c857e59a92c99991381cf34e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt function that sets the wake-up flag to true.  <br /></td></tr>
+<tr class="separator:aff957872c857e59a92c99991381cf34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5664bd38fc668253a0152e6b319aafbb" id="r_a5664bd38fc668253a0152e6b319aafbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a5664bd38fc668253a0152e6b319aafbb">blink</a> ()</td></tr>
 <tr class="memdesc:a5664bd38fc668253a0152e6b319aafbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blinks the LED.  <br /></td></tr>
 <tr class="separator:a5664bd38fc668253a0152e6b319aafbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,6 +161,9 @@ Variables</h2></td></tr>
 <tr class="memitem:acaab577b9c61d226d9f20aef2fe4e7ff" id="r_acaab577b9c61d226d9f20aef2fe4e7ff"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#acaab577b9c61d226d9f20aef2fe4e7ff">minimalMass</a> = 1000.0</td></tr>
 <tr class="memdesc:acaab577b9c61d226d9f20aef2fe4e7ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum mass that needs to be on the scale.  <br /></td></tr>
 <tr class="separator:acaab577b9c61d226d9f20aef2fe4e7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe5889e757976cc7882609b870ff11f" id="r_a3fe5889e757976cc7882609b870ff11f"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a3fe5889e757976cc7882609b870ff11f">hx711Ready</a> = false</td></tr>
+<tr class="memdesc:a3fe5889e757976cc7882609b870ff11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for waking up the controller.  <br /></td></tr>
+<tr class="separator:a3fe5889e757976cc7882609b870ff11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a4b355291fe6b8ba8e167ab0faa862e45" name="a4b355291fe6b8ba8e167ab0faa862e45"></a>
@@ -312,6 +319,25 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aff957872c857e59a92c99991381cf34e" name="aff957872c857e59a92c99991381cf34e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff957872c857e59a92c99991381cf34e">&#9670;&#160;</a></span>hx711ISR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hx711ISR </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupt function that sets the wake-up flag to true. </p>
+
+</div>
+</div>
 <a id="ae084e1bc8ccb35ea289ba0ca4972ea6d" name="ae084e1bc8ccb35ea289ba0ca4972ea6d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae084e1bc8ccb35ea289ba0ca4972ea6d">&#9670;&#160;</a></span>lcd()</h2>
 
@@ -426,6 +452,22 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Flag for the blink interrupt. </p>
+
+</div>
+</div>
+<a id="a3fe5889e757976cc7882609b870ff11f" name="a3fe5889e757976cc7882609b870ff11f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fe5889e757976cc7882609b870ff11f">&#9670;&#160;</a></span>hx711Ready</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool hx711Ready = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag for waking up the controller. </p>
 
 </div>
 </div>

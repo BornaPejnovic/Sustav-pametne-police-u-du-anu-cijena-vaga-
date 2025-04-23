@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['potentiometerpin_0',['potentiometerPin',['../d2/d8f/JagunecLabos1_2sketch_8ino.html#a610f6f648c8b1bb9d9841c95d70b0eed',1,'sketch.ino']]],
-  ['previousweight_1',['previousWeight',['../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a660f922defe68dabab3e041f377f2853',1,'Sustav-pametne-police-u-du-anu-cijena-vaga-.ino']]]
+  ['minimalmass_0',['minimalMass',['../d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#acaab577b9c61d226d9f20aef2fe4e7ff',1,'Sustav-pametne-police-u-du-anu-cijena-vaga-.ino']]],
+  ['motiondetected_1',['motiondetected',['../d2/d8f/JagunecLabos1_2sketch_8ino.html#a490df00b31e9e8da97ed378f3ce98256',1,'motionDetected:&#160;sketch.ino'],['../d6/d9a/Pejnovi_xC4_x87Labos1_2sketch_8ino.html#a490df00b31e9e8da97ed378f3ce98256',1,'motionDetected:&#160;sketch.ino']]],
+  ['motionpin_2',['motionPin',['../d2/d8f/JagunecLabos1_2sketch_8ino.html#a9918ec33ca21e03e21dbd3995b86dcd3',1,'sketch.ino']]]
 ];
