@@ -1,0 +1,16 @@
+digraph "espSerial"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="espSerial",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Software serial communication with ESP-01 (RX = 18, TX = 19)"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="sendToESP",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#aacf4d6eddcdf38ad317b517e3e9b6af6",tooltip="Sends a message to the ESP-01 module via SoftwareSerial."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#afe461d27b9c48d5921c00d521181f12f",tooltip="Arduino main loop function."];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="setup",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a4fc01d736fe50cf5b977f755b675f11d",tooltip="Arduino setup function."];
+}

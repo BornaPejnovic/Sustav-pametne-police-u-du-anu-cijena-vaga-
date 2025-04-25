@@ -1,0 +1,12 @@
+digraph "sendToESP"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="sendToESP",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Sends a message to the ESP-01 module via SoftwareSerial."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="espSerial",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#ad1c30d5ee545853be8353318a2a97964",tooltip="Software serial communication with ESP-01 (RX = 18, TX = 19)"];
+}
