@@ -53,6 +53,26 @@ EXTRACT_LOCAL_CLASSES  = YES                         # Uključi lokalne struktur
 OPTIMIZE_OUTPUT_FOR_C  = YES                         # Stil prikaza prilagođen za C (ne za C++)
 
 #-----------------------------------------------------------------------------
+# Dijagrami i grafički prikazi (Graphviz/DOT)
+#-----------------------------------------------------------------------------
+HAVE_DOT               = YES                         # Omogući korištenje Graphviz alata
+DOT_PATH               = /usr/bin/dot                # Putanja do `dot` programa (ovisno o sustavu)
+DOT_NUM_THREADS        = 2                           # Paralelno generiranje dijagrama
+DOT_FONTNAME           = Helvetica                   # Font u dijagramima
+DOT_FONTSIZE           = 10                          # Veličina fonta
+
+CLASS_DIAGRAMS         = YES                         # Prikaži dijagrame struktura
+CALL_GRAPH             = YES                         # Dijagram toka funkcijskih poziva
+CALLER_GRAPH           = YES                         # Dijagram funkcija koje pozivaju ovu funkciju
+COLLABORATION_GRAPH    = YES                         # Suradnički dijagrami među strukturama
+INCLUDE_GRAPH          = YES                         # Dijagrami uključenih datoteka (#include)
+INCLUDED_BY_GRAPH      = YES                         # Tko uključuje ovu datoteku?
+DIRECTORY_GRAPH        = YES                         # Hijerarhija direktorija
+GRAPHICAL_HIERARCHY    = YES                         # Stablo nasljeđivanja za strukture (ako ih ima)
+TEMPLATE_RELATIONS     = YES                         # Prikaži odnose među generičkim tipovima (nije relevantno za C)
+INTERACTIVE_SVG        = YES                         # Interaktivni SVG dijagrami (zumiranje, klikanje)
+
+#-----------------------------------------------------------------------------
 # Upozorenja i provjera kvalitete
 #-----------------------------------------------------------------------------
 WARNINGS               = YES                         # Omogući upozorenja tijekom generiranja
