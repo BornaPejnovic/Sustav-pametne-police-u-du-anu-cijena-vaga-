@@ -1,0 +1,9 @@
+<map id="setup" name="setup">
+<area shape="rect" id="Node000001" title="Arduino setup function." alt="" coords="5,55,64,80"/>
+<area shape="rect" id="Node000002" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#ad1c30d5ee545853be8353318a2a97964" title="Software serial communication with ESP&#45;01 (RX = 18, TX = 19)" alt="" coords="112,5,195,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,53,109,33,111,38,65,58"/>
+<area shape="rect" id="Node000003" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#aff957872c857e59a92c99991381cf34e" title="Interrupt function that sets the wake&#45;up flag to true." alt="" coords="112,55,195,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="64,65,98,65,98,70,64,70"/>
+<area shape="rect" id="Node000004" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#ae084e1bc8ccb35ea289ba0ca4972ea6d" title=" " alt="" coords="133,104,174,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="65,77,121,101,119,106,63,82"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="loop" name="loop">
+<area shape="rect" id="Node000001" title="Arduino main loop function." alt="" coords="5,80,56,105"/>
+<area shape="rect" id="Node000002" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a5664bd38fc668253a0152e6b319aafbb" title="Blinks the LED." alt="" coords="140,5,195,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="46,78,103,40,126,29,128,34,105,44,49,82"/>
+<area shape="rect" id="Node000003" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a7192c09630d0df44b53e9f8242aca0e3" title="LCD communication for displaying messages." alt="" coords="104,55,231,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,85,90,79,91,84,57,91"/>
+<area shape="rect" id="Node000005" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a38d0369223c952e21c91df75dbbe28de" title="LCD communication for displaying weight." alt="" coords="110,104,225,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="57,94,97,102,96,107,56,100"/>
+<area shape="rect" id="Node000006" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#aacf4d6eddcdf38ad317b517e3e9b6af6" title="Sends a message to the ESP&#45;01 module via SoftwareSerial." alt="" coords="122,153,213,179"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="51,103,105,138,120,145,118,150,103,143,48,108"/>
+<area shape="rect" id="Node000004" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#ae084e1bc8ccb35ea289ba0ca4972ea6d" title=" " alt="" coords="299,80,341,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="231,75,286,84,285,90,231,80"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="225,105,286,95,286,101,225,110"/>
+<area shape="rect" id="Node000007" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#ad1c30d5ee545853be8353318a2a97964" title="Software serial communication with ESP&#45;01 (RX = 18, TX = 19)" alt="" coords="279,153,361,179"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="213,163,265,163,265,169,213,169"/>
+</map>

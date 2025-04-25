@@ -1,0 +1,5 @@
+<map id="sendToESP" name="sendToESP">
+<area shape="rect" id="Node000001" title="Sends a message to the ESP&#45;01 module via SoftwareSerial." alt="" coords="5,5,96,31"/>
+<area shape="rect" id="Node000002" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#ad1c30d5ee545853be8353318a2a97964" title="Software serial communication with ESP&#45;01 (RX = 18, TX = 19)" alt="" coords="144,5,227,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,15,130,15,130,21,96,21"/>
+</map>

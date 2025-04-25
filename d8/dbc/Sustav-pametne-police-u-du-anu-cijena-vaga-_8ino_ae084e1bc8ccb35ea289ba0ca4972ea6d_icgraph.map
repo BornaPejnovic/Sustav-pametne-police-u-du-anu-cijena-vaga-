@@ -1,0 +1,12 @@
+<map id="lcd" name="lcd">
+<area shape="rect" id="Node000001" title=" " alt="" coords="279,55,320,80"/>
+<area shape="rect" id="Node000002" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a7192c09630d0df44b53e9f8242aca0e3" title="LCD communication for displaying messages." alt="" coords="104,5,231,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="265,58,201,33,203,28,267,53"/>
+<area shape="rect" id="Node000004" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a38d0369223c952e21c91df75dbbe28de" title="LCD communication for displaying weight." alt="" coords="110,55,225,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="265,70,225,70,225,65,265,65"/>
+<area shape="rect" id="Node000005" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Arduino setup function." alt="" coords="138,104,197,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="266,82,198,108,196,103,265,77"/>
+<area shape="rect" id="Node000003" href="$d8/dbc/Sustav-pametne-police-u-du-anu-cijena-vaga-_8ino.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop function." alt="" coords="5,31,56,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,35,57,41,56,36,90,30"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="96,58,56,50,57,45,97,52"/>
+</map>
