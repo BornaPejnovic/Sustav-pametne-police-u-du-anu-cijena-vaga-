@@ -38,3 +38,9 @@ Motivacija za ovaj projekt bila je poboljšanje učinkovitosti maloprodajnih sus
 
 ---
 
+## Wokwi
+
+[Link na projekt](https://wokwi.com/projects/428142158967422977)
+
+---
+
