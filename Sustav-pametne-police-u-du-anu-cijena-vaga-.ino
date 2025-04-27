@@ -1,5 +1,5 @@
 /**
- * @file scale_esp_communication.ino
+ * @file Sustav-pametne-police-u-du-anu-cijena-vaga-.ino
  * @brief Program for measuring weight using HX711 and sending data to ESP-01 via SoftwareSerial.
  * 
  * This Arduino sketch uses the HX711 load cell amplifier to read weight measurements and sends
