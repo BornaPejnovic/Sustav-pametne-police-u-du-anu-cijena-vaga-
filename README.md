@@ -10,19 +10,18 @@ Motivacija za ovaj projekt bila je poboljšanje učinkovitosti maloprodajnih sus
 
 ## Funkcijski zahtjevi  
 
-- Sustav mora očitavati masu proizvoda pomoću senzora težine (HX711 + vaga).
-- Kada količina proizvoda padne ispod definiranog minimuma, mora se aktivirati LED indikator ili zvučni signal.
-- Sustav mora u stvarnom vremenu slati podatke putem Wi-Fi modula (ESP8266) na centralno računalo ili mobilni uređaj.
-- (Opcionalno) RFID čitač može identificirati točne proizvode na polici.
-- Sustav mora biti pouzdan i jednostavan za korištenje i nadogradnju.
+- Uređaj mora mjeriti masu predmeta pomoću senzora HX711.
+- Uređaj mora prikazivati trenutačnu masu na LCD zaslonu.
+- Uređaj mora slati obavijesti ESP-01 modulu ako masa padne ispod zadane granice.
+- Uređaj mora signalizirati kritične situacije paljenjem LED-ice.	
 
 ---
 
 ## Tehnologije  
 
-- **Arduino Uno/Nano** – mikrokontroler za upravljanje komponentama  
+- **Arduino Mega** – mikrokontroler za upravljanje komponentama  
 - **HX711 + Load Cell** – za mjerenje težine proizvoda na polici  
-- **ESP8266** – Wi-Fi modul za komunikaciju  
+- **ESP-01** – Wi-Fi modul za komunikaciju  
 - **LED indikator** – vizualno upozorenje o niskim zalihama  
 - **RFID modul** (opcijski) – za identifikaciju proizvoda  
 - **C/C++ (Arduino IDE)** – programski jezik za upravljanje komponentama  
