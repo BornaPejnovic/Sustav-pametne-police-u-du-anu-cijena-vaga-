@@ -1,0 +1,13 @@
+<map id="Sustav&#45;pametne&#45;police&#45;u&#45;du&#45;anu&#45;cijena&#45;vaga&#45;.ino" name="Sustav&#45;pametne&#45;police&#45;u&#45;du&#45;anu&#45;cijena&#45;vaga&#45;.ino">
+<area shape="rect" id="Node000001" title="Program for measuring weight using HX711 and sending data to ESP&#45;01 via SoftwareSerial." alt="" coords="211,5,405,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,83,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,48,97,92,95,87,244,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="107,93,235,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="276,48,204,89,202,84,274,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="259,93,357,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="311,46,311,79,305,79,305,46"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="381,93,528,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="344,43,422,84,420,89,342,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="552,93,651,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="379,43,546,87,544,92,378,48"/>
+</map>
