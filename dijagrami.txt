@@ -1,0 +1,178 @@
+Dijagram obrazaca uporabe
+@startuml
+left to right direction
+
+actor Kupac
+actor Zaposlenik
+
+usecase "Pregled količine proizvoda na polici" as UC01
+usecase "Obavijest o niskoj količini proizvoda" as UC02
+usecase "Prikaz poruke o grešci" as UC03
+usecase "Kalibracija sustava" as UC04
+
+Kupac --> UC01
+Zaposlenik --> UC01
+Zaposlenik --> UC02
+Zaposlenik --> UC03
+Zaposlenik --> UC04
+
+@enduml
+
+SEKVENCIJSKI DIJAGRAMI
+
+Normalno ponašanje sustava
+@startuml
+participant "LCD" as LCD
+actor Arduino
+participant "HX711 Senzor" as HX711
+
+Arduino -> HX711 : Zahtjev za očitanje mase
+HX711 -> Arduino : Odgovor s očitanom vrijednosti
+
+Arduino -> Arduino : Provjera mase
+
+opt Promjena mase je veća od 5 grama
+    Arduino -> LCD : Prikaz očitane mase
+end
+
+@enduml
+
+Potrebna kalibracija
+@startuml
+participant "LCD" as LCD
+participant "LED" as LED
+actor Arduino
+participant "ESP-01" as ESP
+participant "HX711 Senzor" as HX711
+
+Arduino -> HX711 : Zahtjev za očitanje mase
+HX711 -> Arduino : Odgovor s očitanom vrijednosti
+
+Arduino -> Arduino : Provjera mase
+
+opt Masa je manja od nule
+    Arduino -> ESP : Obavijest o pogrešnoj kalibraciji vage
+    Arduino -> LCD : Prikaz poruke o pogrešnoj kalibraciji vage
+    Arduino -> LED : Signal za početak blinkanja
+end
+
+@enduml
+
+Potrebna nadopuna police
+@startuml
+participant "LED" as LED
+actor Arduino
+participant "ESP-01" as ESP
+participant "HX711 Senzor" as HX711
+
+Arduino -> HX711 : Zahtjev za očitanje mase
+HX711 -> Arduino : Odgovor s očitanom vrijednosti
+
+Arduino -> Arduino : Provjera mase
+
+opt Masa je pala ispod 1 kg
+    Arduino -> ESP : Obavijest o manjku proizvoda
+    Arduino -> LED : Signal za početak blinkanja
+    
+    opt Masa se vratila iznad 1 kg
+        Arduino -> ESP : Obavijest o povratku proizvoda
+        Arduino -> LED : Signal za završetak blinkanja
+    end
+end
+
+@enduml
+
+Dijagram razreda
+@startuml
+
+class ArduinoMega2560 {
+  +wait_ready()
+  +get_units() : float
+  +sendToESP(message: String)
+  +displayMessage(message: String)
+  +displayWeight(weight: float)
+}
+
+class HX711 {
+  +wait_ready()
+  +get_units() : float
+}
+
+class ESP01 {
+  +send_message(message: String)
+  +receive_message() : String
+}
+
+class Timer {
+  +attachInterrupt(callback: function)
+  +detachInterrupt()
+}
+
+class LED {
+  +turnOn()
+  +turnOff()
+}
+
+ArduinoMega2560 "1" --> "1" HX711 : Uses
+ArduinoMega2560 "1" --> "1" ESP01 : Sends message to
+ArduinoMega2560 "1" --> "1" Timer : Controls
+ArduinoMega2560 "1" --> "1" LED : Controls
+
+@enduml
+
+Dijagram stanja
+@startuml
+hide empty description
+state "ČekanjePodataka" as ČekanjePodataka
+state "Preopterećenje" as Preopterećenje
+state grananje <<choice>>
+
+[*] --> ČekanjePodataka
+
+ČekanjePodataka : Očitavanje podataka sa senzora HX711
+ČekanjePodataka --> grananje : Očitani podaci
+
+grananje --> PotrebnaKalibracija : [Masa je ispod nule]
+grananje --> Preopterećenje : [Masa je iznad 5 kg]
+grananje --> PrikazMase : [Masa je unutar normalnog raspona]
+
+PotrebnaKalibracija --> [*]
+Preopterećenje --> ČekanjePodataka : Čeka novu vrijednost
+PrikazMase --> ČekanjePodataka : Čeka novu vrijednost
+
+@enduml
+
+Dijagram aktivnosti
+@startuml
+|Sustav|
+start
+
+repeat
+  :Čekanje podataka od HX711 senzora;
+  :Obrada podataka;
+  :Provjera mase;
+
+  if (Masa je negativna?) then (da)
+      :Slanje obavijesti "Recalibration needed!";
+      :Prikazivanje poruke na LCD-u;
+      :Pokretanje bljeskanja LED-a;
+      :Zaustavljanje sustava;
+      stop
+  else (ne)
+      if (Masa je prekomjerna?) then (da)
+          :Prikazivanje poruke na LCD-u "Scale over capacity!";
+      else (ne)
+          :Prikazivanje trenutne mase;
+          if (Masa ispod minimalne granice?) then (da)
+              :Slanje obavijesti "More products needed!";
+              :Pokretanje blinkanja LED-a;
+          else (ne)
+              if (Masa je bila ispod granice?) then (da)
+                  :Slanje obavijesti "Products restocked!";
+                  :Zaustavljanje blinkanja LED-a;
+              endif
+          endif
+      endif
+  endif
+repeat while (Nema kritične greške)
+@enduml
