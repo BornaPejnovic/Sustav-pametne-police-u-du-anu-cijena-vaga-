@@ -4,6 +4,8 @@
  * 
  * This Arduino sketch uses the HX711 load cell amplifier to read weight measurements and sends
  * them to an ESP-01 module using AT commands through a software serial connection.
+ * 
+ * @author Borna Pejnović, Kristijan Jagunec
 */
 
 #include <HX711.h>
